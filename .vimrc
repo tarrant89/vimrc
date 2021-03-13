@@ -6,7 +6,14 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 "
-" " TODO: Load plugins here (pathogen or vundle)
+" Load plugins here (pathogen or vundle)
+" Specify a directory for plugins (avoid using names like plugin)
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+
+"Initialize plugin system
+call plug#end()
 "
 " " Turn on syntax highlighting
 syntax on
@@ -73,7 +80,7 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-" map <leader><space> :let @/=''<cr> " clear search
+map <leader>/ :let @/=''<cr> " clear search
 "
 " " Remap help key.
 " inoremap <F1> <ESC>:set invfullscreen<CR>a
@@ -86,19 +93,9 @@ set showmatch
 " map <leader>q gqip
 "
 " " Visualize tabs and newlines
-" set listchars=tab:Î
+"set listchars=tab:Î
 " l:¬
 " " Uncomment this to enable by default:
 " " set list " To enable by default
 " " Or use your leader key + l to toggle on/off
 " map <leader>l :set list!<CR> " Toggle tabs and EOL
-"
-" " Color scheme (terminal)
-" set t_Co=256
-" set background=dark
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
-" " put
-" https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" " in ~/.vim/colors/ and uncomment:
-" " colorscheme solarized
