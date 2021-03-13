@@ -45,34 +45,34 @@ set noshiftround
 " " Cursor motion
 set scrolloff=3
 set backspace=indent,eol,start
-" set matchpairs+=<:> " use % to jump between pairs
-" runtime! macros/matchit.vim
+set matchpairs+=<:> " use % to jump between pairs
+runtime! macros/matchit.vim
 "
 " " Move up/down editor lines
 " nnoremap j gj
 " nnoremap k gk
 "
 " " Allow hidden buffers
-" set hidden
+set hidden
 "
 " " Rendering
-" set ttyfast
+set ttyfast
 "
 " " Status bar
-" set laststatus=2
+"set laststatus=2
 "
 " " Last line
-" set showmode
-" set showcmd
+set showmode
+set showcmd
 "
 " " Searching
 " nnoremap / /\v
 " vnoremap / /\v
 set hlsearch
-" set incsearch
+set incsearch
 set ignorecase
-" set smartcase
-" set showmatch
+set smartcase
+set showmatch
 " map <leader><space> :let @/=''<cr> " clear search
 "
 " " Remap help key.
