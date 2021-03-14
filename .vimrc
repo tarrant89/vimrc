@@ -11,22 +11,32 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
-"Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'https://github.com/joshdick/onedark.vim.git'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
+Plug 'https://github.com/vim-scripts/AutoComplPop.git'
 
 "Initialize plugin system
 call plug#end()
 "
+"Set colour scheme
+colorscheme onedark
 " " Turn on syntax highlighting
 syntax on
 "
 " " For plugins to load correctly
 filetype plugin indent on
 "
-" " TODO: Pick a leader key
+"Leader key
 let mapleader = ","
 "
+"Edit vimrc command
+nnoremap <Leader>ev :e ~/.vimrc<CR>
+"Normal mode
+inoremap jk <ESC>
+"Disable esc key
+inoremap <ESC> <nop>
 " " Security
 set modelines=0
 "
@@ -50,6 +60,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
 set noshiftround
 "
 " " Cursor motion
@@ -69,7 +80,7 @@ set hidden
 set ttyfast
 "
 " " Status bar
-"set laststatus=2
+set laststatus=2
 "
 " " Last line
 set showmode
@@ -102,3 +113,7 @@ map <leader>/ :let @/=''<cr> " clear search
 " " set list " To enable by default
 " " Or use your leader key + l to toggle on/off
 " map <leader>l :set list!<CR> " Toggle tabs and EOL
+"
+" Add kspell for auto complete
+set complete+=kspell
+set completeopt=menuone,longest
