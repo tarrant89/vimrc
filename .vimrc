@@ -11,6 +11,9 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
+"Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'itchyny/lightline.vim'
+Plug 'dense-analysis/ale'
 
 "Initialize plugin system
 call plug#end()
