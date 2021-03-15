@@ -33,6 +33,10 @@ let mapleader = ","
 "
 "Edit vimrc command
 nnoremap <Leader>ev :e ~/.vimrc<CR>
+"New tabs
+nnoremap <Leader>tn :tabnew<CR>
+"prvious tab
+nnoremap <Leader>th :tabprevious<CR>
 "Normal mode
 inoremap jk <ESC>
 "Disable esc key
